@@ -1,0 +1,385 @@
+<!doctype html>
+        <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+        <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+        <!--[if IE 8]>    <html class="lt-ie9" lang="en-US"> <![endif]-->
+        <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+        <head>
+                <!-- META TAGS -->
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <title>EmotionHub BBS by lishuai</title>
+
+                <link rel="shortcut icon" href="static/images/favicon.png" />
+
+                <!-- Style Sheet-->
+                <link rel="stylesheet" href="static/css/style.css"/>
+                <link rel='stylesheet' id='bootstrap-css-css'  href='static/css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
+                <link rel='stylesheet' id='responsive-css-css'  href='static/css/responsive5152.css?ver=1.0' type='text/css' media='all' />
+                <link rel='stylesheet' id='pretty-photo-css-css'  href='static/js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
+                <link rel='stylesheet' id='main-css-css'  href='static/css/main5152.css?ver=1.0' type='text/css' media='all' />
+                <link rel='stylesheet' id='custom-css-css'  href='static/css/custom5152.html?ver=1.0' type='text/css' media='all' />
+
+
+                <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+                <!--[if lt IE 9]>
+                <script src="tatic/js/html5.js"></script>
+                <![endif]-->
+ <script type="text/javascript">
+       function myCheck1()
+       {
+          if(form1.loginusername.value=="" || form1.loginpassword.value=="")
+          {
+             alert("登陆表用户名或者密码不能为空");
+             form1.loginusername.focus();
+             form1.logpassword.focus();
+             return;
+          }
+          form1.submit();
+
+       }
+       function myCheck2()
+       {
+          if(form2.regusername.value=="" || form2.email.value==""||form2.regpassword.value=="" ||form2.re_regpassword=="")
+          {
+             alert("注册表输入不能为空");
+             form2.regusername.focus();
+             form2.email.focus();
+             form2.regpassword.focus();
+             form2.re_regpassword.focus();
+             return;
+          }
+          if(form2.regpassword.value!=form2.re_regpassword.value)
+          {
+             alert("密码不一致");
+             form2.regpassword.focus();
+             form2.re_regpassword.focus();
+             return;
+
+          }
+
+          form2.submit();
+       }
+
+ </script>
+        </head>
+
+        <body>
+
+                <!-- Start of Header -->
+                <div class="header-wrapper">
+                        <header>
+                                <div class="container">
+
+
+                                        <div class="logo-container">
+                                                EmotionHub BBS
+                                        </div>
+
+
+                                        <!-- Start of Main Navigation -->
+                                        <!--添加发帖功能-->
+                                        <nav class="main-nav">
+                                                <div class="menu-top-menu-container">
+                                                        <ul id="menu-top-menu" class="clearfix">
+                                                                <li class="current-menu-item">Login Page</li>
+                                                                <!--<li><a href="home-categories-description.html">Home 2</a></li>-->
+                                                                <!--<li><a href="home-categories-articles.html">Home 3</a></li>-->
+                                                                <!--<li><a href="#">Hot Posts</a></li>-->
+                                                                <!--<li><a href="#">POST</a></li>-->
+                                                                <!--<li><a href="#">Emotion Classification</a>-->
+                                                                        <!--&lt;!&ndash;<ul class="sub-menu">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<li><a href="full-width.html">Full Width</a></li>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<li><a href="elements.html">Elements</a></li>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<li><a href="page.html">Sample Page</a></li>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                                                                <!--</li>-->
+                                                                <!--<li><a href="#">FAQs</a></li>-->
+                                                                <!--<li><a href="#">Skin</a>-->
+                                                                        <!--<ul class="sub-menu">-->
+                                                                                <!--<li><a href="#">Blue Skin</a></li>-->
+                                                                                <!--<li><a href="#">Green Skin</a></li>-->
+                                                                                <!--<li><a href="#">Red Skin</a></li>-->
+                                                                                <!--<li><a href="#">Default Skin</a></li>-->
+                                                                        <!--</ul>-->
+                                                                <!--</li>-->
+
+                                                                <!--<li><a href="{{ url_for('contact') }}">Contact</a></li>-->
+                                                                <!--<li><a href="#">Logout</a></li>-->
+
+                                                        </ul>
+                                                </div>
+                                        </nav>
+                                        <!-- End of Main Navigation -->
+
+                                </div>
+                        </header>
+                </div>
+                <!-- End of Header -->
+
+                <!-- Start of Search Wrapper -->
+                <div class="search-area-wrapper">
+                        <div class="search-area container">
+                                <h3 class="search-header">EmotionHub BBS</h3>
+                                <p class="search-tag-line">This is the login page for you!</p>
+
+                                <!--<form id="search-form" class="search-form clearfix" method="POST" action="#" autocomplete="on">-->
+                                        <!--<input class="search-term required" type="text" id="s" name="search term" placeholder="Type your search terms here" title="* Please enter a search term!" />-->
+                                        <!--<input class="search-btn" type="submit" value="Search" />-->
+                                        <!--<div id="search-error-container"></div>-->
+                                <!--</form>-->
+                        </div>
+                </div>
+                <!-- End of Search Wrapper -->
+
+                <!-- Start of Page Container -->
+                <div class="page-container">
+
+                        <div class="container">
+                                <div class="row">
+                                        <!-- start of page content -->
+                                        <div class="span8 page-content">
+
+
+                                                 <!--Basic Home Page Template -->
+                                                <div class="row separator">
+                                                         <h2 align="center">Login</h2>
+                                                                <form name="form1" method="post" >
+                                                                        <!--username:<input type="text" align="center" name="username"><br>-->
+                                                                        <!--password:<input type="password" align="center" name="password"><br>-->
+                                                                        <!--<input type="submit" value="Login" style="right">-->
+                                                                        <div align="center">
+                                                                                <ul >
+                                                                                        <input type="text" align="center" placeholder="username" name="loginusername"><br>
+                                                                                        <input type="password" align="center"placeholder="password" name="loginpassword"><br>
+                                                                                        <input type="submit" value="Login" onclick="myCheck1();">
+
+                                                                                </ul>
+
+                                                                        </div>
+
+
+                                                                </form>
+                                                        <!--<section class="span4 articles-list">-->
+                                                                <!---->
+                                                        <!--</section>-->
+
+
+                                                        <!--<section class="span4 articles-list">-->
+                                                                <!--<h2 align="center" >Register</h2>-->
+                                                                <!--<form name="form2" method="post">-->
+                                                                        <!--&lt;!&ndash;username:<input type="text" align="center" name="username"><br>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;password:<input type="password" align="center" name="password"><br>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<input type="submit" value="Login" style="right">&ndash;&gt;-->
+                                                                        <!--<div align="center">-->
+                                                                                <!--<ul >-->
+                                                                                        <!--<input type="text" align="center" placeholder="username" name="regusername"><br>-->
+                                                                                        <!--<input type="email" align="center"placeholder="email" name="email"><br>-->
+                                                                                        <!--<input type="password" align="center"placeholder="password" name="regpassword"><br>-->
+                                                                                        <!--<input type="password" align="center"placeholder="re_password" name="re_regpassword"><br>-->
+                                                                                        <!--<input type="submit" value="Register" onclick="myCheck2();" >-->
+
+                                                                                <!--</ul>-->
+
+                                                                        <!--</div>-->
+
+
+                                                                <!--</form>-->
+
+                                                                <!--&lt;!&ndash;<h3>Latest Posts</h3>&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;<ul class="articles">&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<li class="article-entry standard">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<h4><a href="single.html">仅仅测试</a></h4>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="article-meta">30 Aug, 2018 in <a href="#" title="View all posts in Server &amp; Database">网站开发</a></span>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="like-count">45</span>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<li class="article-entry standard">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<h4><a href="single.html">上传图像的步骤</a></h4>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="article-meta">25 Aug, 2018 in <a href="#" title="View all posts in Advanced Techniques">网站开发</a></span>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="like-count">12</span>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<li class="article-entry image">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<h4><a href="single.html">上传视频的步骤</a></h4>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="article-meta">25 Aug, 2018 in <a href="#" title="View all posts in Designing in WordPress">网站开发</a></span>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="like-count">11</span>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<li class="article-entry video">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<h4><a href="single.html">开发过程</a></h4>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="article-meta">24 Aug, 2018 in <a href="#" title="View all posts in WordPress Plugins">网站开发</a></span>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="like-count">6</span>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<li class="article-entry standard">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<h4><a href="single.html">测试</a></h4>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="article-meta">1 Feb, 2017 in <a href="#" title="View all posts in Website Dev">网站开发</a></span>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="like-count">0</span>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;<li class="article-entry standard">&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<h4><a href="single.html">hello world</a></h4>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="article-meta">24 Aug, 2018 in <a href="#" title="View all posts in Theme Development">新手</a></span>&ndash;&gt;-->
+                                                                                <!--&lt;!&ndash;<span class="like-count">8</span>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                                <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                                                        <!--</section>-->
+
+                                                </div>
+                                        </div>
+                                        <!-- end of page content -->
+
+
+                                        <!-- start of sidebar -->
+                                        <aside class="span4 page-sidebar">
+
+                                                <section class="widget">
+                                                        <div class="support-widget">
+                                                                <h3 class="title">Support</h3>
+                                                                <p class="intro">Need more support? If you did not found a post, contact me for further help.</p>
+                                                        </div>
+                                                </section>
+
+                                                <section class="widget">
+                                                        <div class="quick-links-widget">
+                                                                <h3 class="title">Quick Links</h3>
+                                                                <ul id="menu-quick-links" class="menu clearfix">
+                                                                        <li><a href="#">Home</a></li>
+                                                                        <li><a href="#">Post List</a></li>
+                                                                        <li><a href="#">FAQs</a></li>
+                                                                        <li><a href="#">Contact</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </section>
+
+                                                <section class="widget">
+                                                        <h3 class="title">Tags</h3>
+                                                        <div class="tagcloud">
+                                                                <a href="#" class="btn btn-mini">同济大学</a>
+                                                                <a href="#" class="btn btn-mini">初学者</a>
+                                                                <a href="#" class="btn btn-mini">写博客</a>
+                                                                <a href="#" class="btn btn-mini">出国</a>
+                                                                <a href="#" class="btn btn-mini">计算机视觉</a>
+                                                                <a href="#" class="btn btn-mini">情绪分类</a>
+                                                                <a href="#" class="btn btn-mini">软件工程课程设计</a>
+                                                                <a href="#" class="btn btn-mini">帖子</a>
+                                                                <a href="#" class="btn btn-mini">格式</a>
+                                                                <a href="#" class="btn btn-mini">补丁</a>
+                                                                <a href="#" class="btn btn-mini">图像</a>
+                                                                <a href="#" class="btn btn-mini">视频</a>
+                                                                <a href="#" class="btn btn-mini">论文</a>
+                                                                <a href="#" class="btn btn-mini">数据增强</a>
+
+                                                                <!--<a href="#" class="btn btn-mini">setting</a>-->
+                                                                <!--<a href="#" class="btn btn-mini">templates</a>-->
+                                                                <!--<a href="#" class="btn btn-mini">theme</a>-->
+                                                                <!--<a href="#" class="btn btn-mini">time</a>-->
+                                                                <!--<a href="#" class="btn btn-mini">videos</a>-->
+                                                                <!--<a href="#" class="btn btn-mini">website</a>-->
+                                                                <!--<a href="#" class="btn btn-mini">wordpress</a>-->
+                                                        </div>
+                                                </section>
+
+                                        </aside>
+                                         <!--end of sidebar -->
+                                </div>
+                        </div>
+                </div>
+                <!-- End of Page Container -->
+
+                <!-- Start of Footer -->
+                <footer id="footer-wrapper">
+                        <div id="footer" class="container">
+                                <div class="row">
+
+                                        <div class="span3">
+                                                <section class="widget">
+                                                        <h3 class="title">How it works</h3>
+                                                        <div class="textwidget">
+                                                                <p>本网站由同济大学计算机系李帅设计，总体采用Flask框架，支持全站搜索，情绪分析，其中情绪分析是基于深度学习ResNet,在FER2013训练集上训练得到。 </p>
+                                                                <p>Github:<a href="https://github.com/TomHacker">https://github.com/TomHacker</a> </p>
+
+                                                        </div>
+                                                </section>
+                                        </div>
+
+                                        <div class="span3">
+                                                <section class="widget"><h3 class="title">Categories</h3>
+                                                        <ul>
+                                                                <!--<li><a href="#" title="Lorem ipsum dolor sit amet,">Advanced Techniques</a> </li>-->
+                                                                <li><a href="http://www.cs.cmu.edu/~cil/vision.html" title="Lorem ipsum dolor sit amet,">Computer Vision</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Server &amp; Database</a></li>
+                                                                <li><a href="http://flask.pocoo.org/" title="Lorem ipsum dolor sit amet, ">Flask</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet,">Website Dev</a></li>
+                                                                <li><a href="https://www.tongji.edu.cn/" title="Lorem ipsum dolor sit amet,">Tongji University</a></li>
+                                                                <li><a href="#" title="Lorem ipsum dolor sit amet, ">Go Abroad</a></li>
+                                                        </ul>
+                                                </section>
+                                        </div>
+
+                                        <div class="span3">
+                                                <section class="widget">
+                                                        <h3 class="title">Latest Tweets</h3>
+                                                        <div id="twitter_update_list">
+                                                                <ul>
+                                                                        <li>No Tweets loaded !</li>
+                                                                </ul>
+                                                        </div>
+
+                                                </section>
+                                        </div>
+
+                                        <div class="span3">
+                                                <section class="widget">
+                                                        <h3 class="title">Flickr Photos</h3>
+                                                        <div class="flickr-photos" id="basicuse">
+                                                        </div>
+                                                </section>
+                                        </div>
+
+                                </div>
+                        </div>
+                        <!-- end of #footer -->
+
+                        <!-- Footer Bottom -->
+                        <div id="footer-bottom-wrapper">
+                                <div id="footer-bottom" class="container">
+                                        <div class="row">
+                                                <div class="span6">
+                                                        <p class="copyright">
+                                                                Copyright &copy; 2018.LiShuai Group All rights reserved.<a target="_blank" href="#">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                                                        </p>
+                                                </div>
+                                                <div class="span6">
+                                                        <!-- Social Navigation -->
+                                                        <ul class="social-nav clearfix">
+                                                                <li class="linkedin"><a target="_blank" href="#"></a></li>
+                                                                <li class="stumble"><a target="_blank" href="#"></a></li>
+                                                                <li class="google"><a target="_blank" href="#"></a></li>
+                                                                <li class="deviantart"><a target="_blank" href="#"></a></li>
+                                                                <li class="flickr"><a target="_blank" href="#"></a></li>
+                                                                <li class="skype"><a target="_blank" href="skype:#?call"></a></li>
+                                                                <li class="rss"><a target="_blank" href="#"></a></li>
+                                                                <li class="twitter"><a target="_blank" href="#"></a></li>
+                                                                <li class="facebook"><a target="_blank" href="#"></a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- End of Footer Bottom -->
+
+                </footer>
+                <!-- End of Footer -->
+
+                <a href="#top" id="scroll-top"></a>
+
+                <!-- script -->
+                <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
+                <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+                <script type='text/javascript' src='js/prettyphoto/jquery.prettyPhoto.js'></script>
+                <script type='text/javascript' src='js/jflickrfeed.js'></script>
+				<script type='text/javascript' src='js/jquery.liveSearch.js'></script>
+                <script type='text/javascript' src='js/jquery.form.js'></script>
+                <script type='text/javascript' src='js/jquery.validate.min.js'></script>
+                <script type='text/javascript' src='js/custom.js'></script>
+
+        <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
