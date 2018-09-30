@@ -3,5 +3,14 @@
 <div align="center">Features: Post, Comment, Emotion classification based on dnn, Station search, Private letter</div>
 <div align="center><img src="/main.png"/></div>
 
-##主页
+主页：
 ![demo](main.png)
+
+底部：
+![demo](buttom.png)
+
+热帖：
+![demo](hot.png)
+
+发帖:
+![demo](post.png)
